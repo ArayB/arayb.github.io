@@ -23,3 +23,6 @@ git branch --delete branchname
 
 ```
 
+#### Untrack a file
+
+`git rm --cached <file path>`
