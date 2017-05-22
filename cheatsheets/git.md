@@ -9,7 +9,7 @@ git fetch origin
 
 git rebase -i origin/master
 
-gp --force-with-lease branchname
+gp --force-with-lease origin branchname
 
 gco master
 
