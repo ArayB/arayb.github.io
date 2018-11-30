@@ -1,0 +1,13 @@
+@mixin patterned-bg{
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHUlEQVQImWNgwAWePn36H4ZRBG/evIkpiKESHQAAwpcg+2Cc1C4AAAAASUVORK5CYII=) repeat;
+}
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}

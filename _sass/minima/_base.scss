@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 3;
 }
 
 
@@ -95,8 +95,16 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
+  font-family: $heading-font-family;
 }
 
+h1 {
+  @include relative-font-size(1.5);
+}
+
+h2 {
+  @include relative-font-size(1.25);
+}
 
 
 /**
@@ -107,12 +115,12 @@ a {
   text-decoration: underline;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: darken($brand-color, 2%);
   }
 
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    color: lighten($brand-color, 2%);
+    // text-decoration: underline;
   }
 
   .social-media-list &:hover {
@@ -149,10 +157,8 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 1px solid $grey-color-light;
-  border-radius: 3px;
-  background-color: #222;
-  color: $light-text-color;
+  background-color: #333;
+  color: #e3e3e3;
 }
 
 code {

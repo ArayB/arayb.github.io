@@ -2,29 +2,26 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
-  background-color: #EE680F;
-
   // Positioning context for the mobile navigation icon
   position: relative;
 }
 
 a.site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
-  line-height: $base-line-height * $base-font-size * 2.25;
-  letter-spacing: -1px;
+  @include relative-font-size(2);
+  font-weight: 600;
   margin-bottom: 0;
   float: left;
   text-decoration: none;
-  color: $light-text-color;
+  color: $text-color;
+  text-transform: uppercase;
+  font-family: $heading-font-family;
 }
 
 .site-nav {
   float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  margin-top: 6px;
+  // line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
       display: none;
@@ -35,23 +32,27 @@ a.site-title {
   }
 
   .page-link {
-    color: $light-text-color;
-    line-height: $base-line-height;
+    padding: 2px 4px;
+    text-transform: uppercase;
+    margin-right: 0;
+    text-decoration: none;
+    color: $text-color;
+    font-family: $heading-font-family;
+
+    &:hover {
+      background-color: $brand-color;
+    }
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 6px;
     }
   }
 
   @include media-query($on-palm) {
     position: absolute;
-    top: 9px;
+    top: 4px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
-    text-align: right;
 
     label[for="nav-trigger"] {
       display: block;
@@ -83,17 +84,17 @@ a.site-title {
 
     input:checked ~ .trigger {
       display: block;
-      padding-bottom: 5px;
+      padding: 10px;
+      background-color: #fff;
+      border: 2px solid $base-color;
     }
 
     .page-link {
       display: block;
-      padding: 5px 10px;
-
       &:not(:last-child) {
+        margin-bottom: 4px;
         margin-right: 0;
       }
-      margin-left: 20px;
     }
   }
 }
@@ -215,39 +216,25 @@ a.site-title {
 }
 
 .post-title {
-  @include relative-font-size(2.625);
-  letter-spacing: -1px;
-  line-height: 1;
-
-  @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
-  }
 }
 
 .post-content {
   margin-bottom: $spacing-unit;
 
   h2 {
-    @include relative-font-size(2);
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
-    }
-  }
-
-  h3 {
-    @include relative-font-size(1.625);
-
-    @include media-query($on-laptop) {
-      @include relative-font-size(1.375);
-    }
-  }
-
-  h4 {
     @include relative-font-size(1.25);
+    margin-top: $spacing-unit;
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
+    }
+  }
+  h3 {
+    @include relative-font-size(1.1);
+    margin-top: $spacing-unit;
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.1);
     }
   }
 }
